@@ -1,0 +1,378 @@
+@charset "UTF-8";
+
+/*FONTES*/
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap');
+
+@font-face {
+    font-family: "PublicSans-LightItalic";
+    src: url(../fonts/PublicSans-LightItalic.ttf);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/*ROOT*/
+
+:root {
+    --azulescuro: #10454F;
+    --cinzaescuro: #506266;
+    --marompastel: #818274;
+    --verdepastel: #A3AB78;
+    --verdelimao: #BDE038;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+header {
+    background-color: var(--cinzaescuro);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header > h1 {
+    text-align: center;
+    font-family: 'Playwrite CU';
+    font-size: 2.6rem;
+}
+
+/*MENU RESPONSIVO*/
+span#burguer {
+    display: none;
+ }
+
+@media screen and (max-width: 650px) {
+    header nav {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        display: none;
+    }
+
+    nav a {
+        margin-right: 10px;
+        color: rgb(88, 61, 61);
+        text-decoration: none;
+    }
+
+    span#burguer {
+        text-align: center;
+        background-color: rbg(49, 49, 49);
+        display: block;
+        padding: 10px;
+        cursor: pointer;
+    }    
+
+    span#burguer:hover {
+        background-color: white;
+        border-radius: 20px;
+        color:rgb(0, 0, 0);
+    }
+}
+
+
+nav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+}
+
+nav a {
+    padding: 10px;
+    margin-right: 10px;
+    color: rgb(88, 61, 61);
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: var(--verdepastel);
+    color: white;
+    padding: 12px;
+    border-radius: 20px;
+    transition: 0.6s;
+}
+
+header .logo {
+    background-color: blueviolet;
+    width: 200px;
+    height: 90px;
+    border-radius: 0px 20px;
+}
+
+/*SOBRE*/
+
+#sobre {
+    display: flex;
+    flex-flow: column wrap;
+    flex-basis: auto 1 1;
+    align-items: center;
+    justify-content: center;
+    background-color: #818274;
+    padding: 20px;
+}
+
+#sobre h2 {
+    margin-top: 20px;
+    font-family: 'Playwrite CU';
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+}
+
+#sobre p {
+    font-family: "PublicSans-LightItalic";
+    color: white;
+    text-indent: 20px;
+    line-height: 40px;
+}
+
+div.fotos-divisao-design {
+    display: flex;
+    flex-basis: auto 1 1;
+    width: 100%;
+}
+
+.icons-detalhe {
+    width: 50px;
+}
+
+img.apresentacao-img {
+    background-attachment: fixed;
+    width: 100%;
+}
+
+/*CARROSEL*/
+
+.slideshow-container {
+    
+    width: 100%;
+    position: relative;
+    margin: auto;
+}
+
+.slideshow {
+    display: none;
+}
+
+.slideshow img { width:100%; }
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.legenda {
+    width: auto;
+    color: #fdfdfd;
+    font-size: 0.9em;
+    border-radius: 10px;
+    padding:5px;
+    position: absolute;
+    bottom: 18%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    left: 10%;
+}
+
+.numeracao {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.paginacao { 
+  
+    width:100%; 
+    float:left;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.dot {
+    cursor: pointer;
+    height: 13px;
+    width: 13px;
+    margin: 0 4px;
+    border-radius: 50px;
+    background-color: #007cff;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.ativo,
+.dot:hover {
+    background-color: #242424;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 2s;
+    animation-name: fade;
+    animation-duration: 2s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fade {
+    from {
+        opacity: .4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/*960PX BREAKPOINT - Ajustando o texto para desktop*/
+@media (min-width:60em){
+    .legenda   { font-size:2em; padding:8px; }
+    .paginacao { margin:20px 0; }
+    .dot       { width:18px; height:18px; }
+}
+
+/*CARDAPIO*/
+
+#cardapio {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    flex-basis: 1 1 auto;
+    background-color: #818274;
+    padding: 20px;
+}
+
+#cardapio > h2 {
+    margin-top: 20px;
+    font-family: 'Playwrite CU';
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+}
+
+#cardapio > h3 {
+    font-family: 'Playwrite CU';
+    color: white;
+}
+
+#cardapio > p {
+    font-family: "PublicSans-LightItalic";
+    color: white;
+    text-indent: 20px;
+    line-height: 40px;
+}
+
+.conclucao-cardapio {
+    text-align: center;
+    font-size: 1.6em;
+} 
+
+/* FALE CONOSCO */
+
+#formulario-fale-conosco {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    flex-basis: auto 1 1;
+}
+
+#fale-conosco h2 {
+    margin-top: 20px;
+    font-family: 'Playwrite CU';
+    text-align: center;
+    color: rgb(0, 0, 0);
+    margin-bottom: 35px;
+}
+
+input {
+   padding: 20px;
+   border-radius: 20px;
+    margin: 10px;
+    width: 80vw;
+}
+
+.input-descricao {
+    height: 30vh;
+}
+
+.input-enviar {
+    background-color: var(--marompastel);
+}
+
+.input-enviar:hover {
+    background-color: rgb(197, 247, 197);
+    transition: 0.4s;
+} 
+
+/*FOOTER*/
+
+footer {
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: var(--cinzaescuro);
+    padding: 20px;
+}
+
+footer > p {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+footer a.github {
+    text-decoration: none;
+    color: rgb(137, 140, 189);
+}
+
+footer .icons-redes-sociais {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: end;
+    align-items: end;
+    margin-bottom: 20px;
+}
+
+footer .icons-footer {
+    width: 40px;
+    margin-left: 10px;
+}
+
+footer .icon-footer-x {
+    width: 40px;
+    border-radius: 20px;
+    margin-left: 10px;
+}

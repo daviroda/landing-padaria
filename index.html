@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padaria Alburquerque</title>
+    <link rel="stylesheet" href="assets/estilos/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
+</head>
+<body>
+  <!--HEADER-->
+    <header>
+        <a href="#">
+            <img class="logo" src="./assets/img/logo.png" alt="logo">
+        </a>
+        <span id="burguer" class="material-symbols-outlined" onclick="clickMenu()">
+          menu
+          </span>
+        <nav id="itens">
+            <a href="#">HOME</a>
+            <a href="#sobre">SOBRE</a>
+            <a href="#cardapio">CARDAPIO</a>
+            <a href="#fale-conosco">FALE CONOSCO</a>
+        </nav>
+    </header>
+    <main>
+      <!--FOTOS DIVISÃO PARA DESIGN-->
+       <div class="fotos-divisao-design">
+            <img class="apresentacao-img" src="./assets/img/paes.jpeg" alt="imagens-de-pães">
+       </div>
+       <!--SOBRE-->
+       <section id="sobre">
+            <h2>SOBRE
+            <img class="icons-detalhe" src="https://cdn.icon-icons.com/icons2/2070/PNG/512/cake_icon_125998.png" alt="icon-bolo"></h2>
+            <p>Em nossa padaria, cada pão é feito à mão com fermentação natural, resultando em uma textura única e sabor inigualável. Os ingredientes frescos e de alta qualidade são cuidadosamente selecionados para garantir a experiência mais autêntica.
+            bolos e doces são verdadeiras obras de arte, elaborados com técnicas tradicionais e um toque contemporâneo. Venha saborear a doçura da vida em cada pedaço.</p>
+            <p>A ambientação do local é bem refrescante e aconchegante, tem uma ifraestrutura bem divertida e ao mesmo tempo elegante, com design inovador e objetação modulada em impressão 3D.
+            Temos diversos tipos de paes, bolos e doces. Tudo feito com bastante amor de carinho para você cliente, queremos o seu melhor.</p>
+       </section>
+          <!--FOTOS DIVISÃO PARA DESIGN-->
+          <div class="fotos-divisao-design">
+            <img class="apresentacao-img" src="./assets/img/brigadeiro.jpeg" alt="brigadeiro">
+          </div>
+       </section>
+       <!--CARDAPIO-->
+       <section id="cardapio">
+            <h2>CARDAPIO
+            <img class="icons-detalhe" src="https://cdn.icon-icons.com/icons2/2070/PNG/512/cake_icon_125998.png" alt="icon-bolo">
+            </h2>
+              <p>Em nossa padaria, a paixão pela panificação se transforma em obras de arte culinárias. Cada criação é resultado de uma seleção minuciosa de ingredientes premium e de um processo artesanal que valoriza os sabores autênticos.</p>
+              <h3>Um convite à degustação:</h3>
+                <p>Massas fermentadas naturalmente, grãos integrais e fermentos especiais conferem a cada pão uma textura única e sabor inconfundível.</p>
+                <p>Uma homenagem à tradição francesa, com baguetes crocantes, croissants amanteigados.</p>
+              <h3>Pães Artesanais:</h3>
+                <p>Uma explosão de sabores com pães recheados, focaccias aromatizadas e pães de fermentação longa, que revelam a complexidade dos ingredientes.</p>
+              <h3>Bolos e Tortas:</h3>
+                <p>Obras de arte culinárias que encantam os olhos e o paladar. Sabores clássicos e contemporâneos, com combinações inusitadas de ingredientes e decorações sofisticadas.</p>
+              <h3>Doces Finos:</h3> 
+              <p>Uma seleção de doces finos, como macarons, trufas e éclairs, preparados com chocolate belga e outros ingredientes nobres.</p>
+              <h3>Salgados Gourmet:</h3>
+              <p>Miniaturas de sabor, com massas leves e recheios sofisticados, perfeitos para acompanhar um café ou um vinho.</p>
+              <h3>Café Especial:</h3>
+              <p>Uma seleção de cafés especiais, torrados e moídos na hora, com bastante detalhes, e sabores fantásticos, para uma experiência sensorial única.</p>
+              <h3>Chás Finos:</h3>
+              <p>Uma variedade de chás finos, provenientes das melhores plantações do mundo, com certificações nacionais e internacioais, para momentos de relaxamento e bem-estar.</p>
+              
+              <h3 class="conclucao-cardapio"> Uma experiência única:</h3>
+              <p>Todos os nossos produtos são feitos artesanalmente, com ingredientes frescos e de alta qualidade. Não utilizamos conservantes artificiais, corantes ou aromatizantes. Acreditamos que a simplicidade e a naturalidade dos ingredientes são a chave para um sabor autêntico e inigualável.</p>
+              
+              <p>Nossa padaria é mais do que um lugar para comprar pão. É um espaço para saborear, compartilhar e celebrar a vida. Um ambiente acolhedor e sofisticado, onde você pode desfrutar de um café da manhã completo, um lanche da tarde delicioso ou uma sobremesa inesquecível.</p>
+       </section>
+       <!--CARROSEL-->
+       <section class="carrosel">
+        <div class="slideshow-container">
+          <div class="slideshow fade">
+              <div class="numeracao">1 / 3</div>
+              <img src="./assets/img/pao-carrosel.jpeg" alt="slide">
+              <div class="legenda">Pães</div>
+          </div>
+          <div class="slideshow fade">
+              <div class="numeracao">2 / 3</div>
+              <img src="./assets/img/bolo-carrosel.jpeg" alt="Slide">
+              <div class="legenda">Bolos</div>
+          </div>
+          <div class="slideshow fade">
+              <div class="numeracao">3 / 3</div>
+              <img src="./assets/img/chocolate-caramelo-carrosel.jpeg" alt="Slide">
+              <div class="legenda">Chocolates Caramelados</div>
+          </div>
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+        <div class="paginacao">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+      </section>
+      <!--FALE CONOSCO-->
+      <section id="fale-conosco">
+        <h2>FALE CONOSCO</h2>
+        <div id="formulario-fale-conosco">
+          <form action="index.html" method="post">
+            <div>
+              <input type="email" name="email" id="iemail" required maxlength="40" placeholder="EMAIL">
+            </div>
+            <div>
+              <input type="text" name="name" id="iname" required maxlength="15" minlength="4" placeholder="NOME">
+            </div>
+            <div>
+              <input type="tel" name="telefone" id="itelefone" required minlength="10" maxlength="15" placeholder="TELEFONE">
+            </div>
+            <div>
+              <input type="text" name="descricao" id="idescricao" class="input-descricao" maxlength="140" placeholder="DESCRIÇÃO(*OPICIONAL)">
+            </div>
+            <div>
+              <input type="submit" class="input-enviar" value="ENVIAR">
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <!--FOOTER-->
+    <footer>
+    <div class="icons-redes-sociais">
+      <td><a href="#" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/ios_filled/512/facebook-new.png" alt="icon-facebook" class="icons-footer"></a></td>
+      <td><a href="#" target="_blank" rel="noopener noreferrer"><img src="https://cdn.icon-icons.com/icons2/3781/PNG/512/instagram_icon_231990.png" alt="icon-instagram" class="icons-footer"></a></td>
+      <td><a href="#" target="_blank" rel="noopener noreferrer"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcbbkAWH8ZnrfxzrRnUE7h1WHWmM6WHos3Ng&s" alt="icon-x" class="icon-footer-x"></a></td>
+    </div>
+      <p>Desenvolvido por <a href="https://github.com/daviroda" class="github" target="_blank">Davi Roda</a></p>
+      <p>&copy; Todos os direitos reservados Alburquerque</p>
+    </footer>
+    <!--SCRIPTS-->
+    <script>
+      const navItens = document.getElementById("itens")
+
+      function clickMenu() {
+        if (itens.style.display == 'block') {
+            itens.style.display = 'none'
+        } else  {
+            itens.style.display = 'block'
+        }
+    }
+    </script>
+    <script src="assets/script/carrosel.js"></script>
+</body>
+</html>
