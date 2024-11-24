@@ -50,6 +50,7 @@ span#burguer {
     display: none;
  }
 
+/*MEDIA QUERIES -- MENU*/
 @media screen and (max-width: 650px) {
     header nav {
         margin-top: 20px;
@@ -75,6 +76,16 @@ span#burguer {
         background-color: white;
         border-radius: 20px;
         color:rgb(0, 0, 0);
+    }
+}
+
+@media screen and (max-width: 450px) {
+    img.logo {
+        width: 100px;
+    }
+
+    nav a{
+        display: block;
     }
 }
 
